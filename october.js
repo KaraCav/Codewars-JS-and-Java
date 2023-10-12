@@ -1,4 +1,4 @@
-// 1. (6 Kyu) Find The Parity Outlier
+// NUMBER 1: (6 Kyu) Find The Parity Outlier
   // When given an array of either all even or all odd integers except one number, N, return N. 
   // Arrays have a minimum of 3 integers, up to a very large number.
   // Example: [2, 4, 0, 11, 2602, 36] -->  return 11 (the only odd number)
@@ -65,3 +65,15 @@ function findOutlier(integers){
       }
   }
 } 
+
+// NUMBER 1 - revised answer
+function findOutlier(arr){
+  var evenArr = arr.filter(function(num) {
+      return num % 2 === 0;
+  });
+  var oddArr = arr.filter(function(num) {
+      return num % 2 !== 0;
+  });
+  return evenArr.length > oddArr.length ? oddArr[0] : evenArr[0];
+}
+
