@@ -2,7 +2,7 @@
   // When given an array of either all even or all odd integers except one number, N, return N. 
   // Arrays have a minimum of 3 integers, up to a very large number.
   // Example: [2, 4, 0, 11, 2602, 36] -->  return 11 (the only odd number)
-// First Attempt:
+// First Attempt (not using lambdas or ternaries):
 function findOutlier(integers){
   // PART 1 - Check if the first 3 numbers are all EVEN
   if(Math.abs(integers[0]) % 2 === 0 && Math.abs(integers[1]) % 2 === 0 && Math.abs(integers[2]) % 2 === 0) {
